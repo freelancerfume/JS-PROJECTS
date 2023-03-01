@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sınav Sonuç Sayfası</title>
+    <style>
+        .div1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            background: #B87333;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 10px;
+        }
+
+        .div2 {
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        <p><b>Vize</b></p>
+        <input type="number" min="0" max="100" id="in1">
+        </br>
+        <p><b>Final</b></p>
+        <input type="number" min="0" max="100" id="in2">
+        </br>
+        </br>
+        <button onclick="Hesapla()">Hesapla</button>
+        <div class="div2">
+            <h3 id="puan"></h3>
+            <p id="msg"></p>
+        </div>
+    </div>
+
+
+    <script>
+        function Hesapla() {
+            var v = parseInt(document.getElementById("in1").value);
+            var f = parseInt(document.getElementById("in2").value);
+            var h = (v * 0.4) + (f * 0.6);
+            document.getElementById("puan").innerHTML = h;
+
+            if (h <= 20) {
+                document.getElementById("msg").innerHTML = "Nittin gardaaaş!";
+            } else if (h <= 40) {
+                document.getElementById("msg").innerHTML = "Abooovvv hiç çalışmamışın sen";
+            }
+            else if (h <= 60) {
+                document.getElementById("msg").innerHTML = "Icık daha gayret et";
+            }
+            else if (h <= 80) {
+                document.getElementById("msg").innerHTML = "Olacak senden";
+            }
+            else if (h <= 100) {
+                document.getElementById("msg").innerHTML = "Efferin len";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cc{
+            color: blue;
+        }
+        #pid{
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <p id="pid" class="cc">Merhaba</p>
+    <p class="cc">Hello</p>
+    <p class="cc">Hello</p>
+    <p class="cc">Hello</p>
+    <p class="cc">Hello</p>
+
+    <button onclick="Run()">Çalıştır</button>
+    <button onclick="Run2()">Run 2</button>
+
+
+    <script>
+        function Run(){
+            var x = document.getElementsByClassName("cc");
+            x[4].innerHTML="DOM Class Name";
+        }
+        function Run2(){
+            document.getElementById("pid").innerHTML="ID Deneme";
+        }
+    </script>
+</body>
+</html>
