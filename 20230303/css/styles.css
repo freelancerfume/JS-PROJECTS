@@ -1,0 +1,6 @@
+#carouselExampleAutoplaying .carousel-item img {
+    object-fit: cover;
+    object-position: center;
+    height: 80vh;
+    overflow: hidden;
+}
